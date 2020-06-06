@@ -1,33 +1,34 @@
-import React from "react";
-import * as Icons from "../components/icons";
+import React from 'react'
+
+import * as Icons from '../components/icons'
 
 export default {
-  title: "Icons",
-};
+  title: 'Icons'
+}
 
 export const Icon = () => (
   <div className="icons">
     <Icons.ArrowBottom />
-    <Icons.BookmarkFill />
     <Icons.Bookmark />
+    <Icons.BookmarkFill />
     <Icons.Emoji />
     <Icons.Explore />
     <Icons.ExplorerFill />
     <Icons.Gif />
-    <Icons.HomeFill />
     <Icons.Home />
+    <Icons.HomeFill />
     <Icons.Like />
-    <Icons.ListsFill />
     <Icons.Lists />
+    <Icons.ListsFill />
     <Icons.Media />
-    <Icons.MessagesFill />
     <Icons.Messages />
+    <Icons.MessagesFill />
     <Icons.More />
-    <Icons.NotificationFill />
     <Icons.Notification />
+    <Icons.NotificationFill />
     <Icons.Options />
-    <Icons.ProfileFill />
     <Icons.Profile />
+    <Icons.ProfileFill />
     <Icons.Question />
     <Icons.Reply />
     <Icons.Retweet />
@@ -36,4 +37,4 @@ export const Icon = () => (
     <Icons.TimelineProp />
     <Icons.Twitter />
   </div>
-);
+)
