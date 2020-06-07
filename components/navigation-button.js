@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import classnames from "classnames";
+import Button from "./button";
+import styles from "./navigation-button.module.css";
 
-import Button from './button'
-
-import styles from './navigation-button.module.css'
-
-function NavigationButton({ children }) {
-  return <Button className={styles.navButton}>{children}</Button>
+function NavigationButton({ children, selected, notify, props }) {
+  return (
+    <Button
+      className={classnames(
+        styles.navButton,
+        selected && styles.navButtonSelected
+      )}
+      {...props}
+    >
+      {children}
+      {notify && <span className={styles.notify}>{notify}</span>}
+    </Button>
+  );
 }
 
-export default NavigationButton
+export default NavigationButton;
