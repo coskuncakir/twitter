@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import * as Icons from '../components/icons'
+import * as Icons from "../components/icons";
 
 export default {
-  title: 'Icons'
-}
+  title: "Icons",
+};
 
 export const Icon = () => (
   <div className="icons">
@@ -37,4 +37,4 @@ export const Icon = () => (
     <Icons.TimelineProp />
     <Icons.Twitter />
   </div>
-)
+);

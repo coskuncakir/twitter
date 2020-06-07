@@ -1,12 +1,12 @@
 import React from "react";
-import classNames from "classnames";
+import cn from "classnames";
 import styles from "./button.module.css";
 
-function Button({ children, className, ...props }) {
+function Button({ full = false, children, className, ...props }) {
   return (
     <button
       type="button"
-      className={classNames(styles.button, className)}
+      className={cn([styles.button, full && styles.fullWidthButton, className])}
       {...props}
     >
       {children}
