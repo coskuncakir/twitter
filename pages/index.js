@@ -8,10 +8,9 @@ import RightSidebar from "../components/col-right";
 
 function HomePage() {
   const windowSize = useWindowSize();
-
   return (
     <Layout>
-      <LeftSidebar flat={windowSize > CONST.DESKTOP_SIZE}>
+      <LeftSidebar flat={windowSize.width < CONST.DESKTOP_SIZE}>
         Left Sidebar
       </LeftSidebar>
       <Main>{JSON.stringify(windowSize)}</Main>

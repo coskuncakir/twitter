@@ -6,7 +6,7 @@ function Button({ full = false, children, className, ...props }) {
   return (
     <button
       type="button"
-      className={cn([styles.button, full && styles.fullWidthButton, className])}
+      className={cn(styles.button, full && styles.fullWidth, className)}
       {...props}
     >
       {children}

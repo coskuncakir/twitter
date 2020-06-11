@@ -8,10 +8,14 @@ function LeftSidebar({ flat }) {
   return (
     <div className={cn(styles.sidebar)}>
       <Navigation flat={flat} />
-      <ThemeButton full big>
-        Tweet
-      </ThemeButton>
-      <ProfileBox />
+      <div className={styles.tweet}>
+        <ThemeButton large full={!flat}>
+          {flat ? "T" : "Tweet"}
+        </ThemeButton>
+      </div>
+      <div className={styles.profile}>
+        <ProfileBox flat={flat} />
+      </div>
     </div>
   );
 }
