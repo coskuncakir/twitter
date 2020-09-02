@@ -1,0 +1,14 @@
+.container {
+  padding: 20px;
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 16px;
+
+    input {
+      font-size: 20px;
+      margin-right: 8px;
+    }
+  }
+}
