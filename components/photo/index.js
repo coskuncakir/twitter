@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./photo.module.css";
+import styles from "./index.module.css";
 import cn from "classnames";
 
 function Photo({ src = "images/avatar.jpg", alt, size = 47 }) {

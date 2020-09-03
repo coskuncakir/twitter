@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import styles from "./button.module.css";
+import styles from "./index.module.css";
 import Link from "next/link";
 
 function LinkButton({ path, children, ...props }) {

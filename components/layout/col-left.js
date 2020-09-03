@@ -1,8 +1,8 @@
 import cn from "classnames";
 import styles from "./col-left.module.css";
-import Navigation from "./navigation";
-import ThemeButton from "./theme-button";
-import ProfileBox from "./profile-box";
+import Navigation from "../navigation";
+import ThemeButton from "../theme-button";
+import ProfileBox from "../profil-box";
 
 function LeftSidebar({ flat }) {
   return (

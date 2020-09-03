@@ -1,8 +1,8 @@
-import styles from "./layout.module.css";
+import styles from "./index.module.css";
 import cn from "classnames";
-import useWindowSize from "../hooks/useWindowSize";
+import useWindowSize from "../../hooks/useWindowSize";
 
-import CONST from "../constants";
+import CONST from "../../constants";
 import LeftSidebar from "./col-left";
 import Main from "./col-main";
 import RightSidebar from "./col-right";

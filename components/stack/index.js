@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./stack.module.css";
+import styles from "./index.module.css";
 import cn from "classnames";
 
 function Stack({ children, column = false, gap = 12 }) {

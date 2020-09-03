@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
-import Button from "./button";
-import styles from "./theme-button.module.css";
+import Button from "../button";
+import styles from "./index.module.css";
 
 function ThemeButton({ className, children, large = false, ...props }) {
   return (
