@@ -14,7 +14,7 @@ function HomePage() {
         <Loading />
       </Layout>
     );
-  debugger;
+
   return (
     <Layout>
       {data?.map((tweet) => (
