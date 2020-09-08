@@ -1,5 +1,4 @@
 import styles from "./index.module.css";
-import cn from "classnames";
 import useWindowSize from "../../hooks/useWindowSize";
 
 import CONST from "../../constants";
@@ -10,7 +9,7 @@ import RightSidebar from "./col-right";
 function Layout({ children }) {
   const windowSize = useWindowSize();
   return (
-    <div className={cn(styles.layout)}>
+    <div className={styles.layout}>
       <LeftSidebar flat={windowSize.width < CONST.DESKTOP_SIZE}>
         Left Sidebar
       </LeftSidebar>

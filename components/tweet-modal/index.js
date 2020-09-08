@@ -17,7 +17,14 @@ function TweetModal({ closeModal = () => {} }) {
       body: JSON.stringify({ tweet: tweet }),
     });
 
+    if (response.status !== 200) {
+      setLoading(false);
+      throw "An error occurred";
+    }
+
+    setTweet("");
     setLoading(false);
+    closeModal();
   };
 
   return (
