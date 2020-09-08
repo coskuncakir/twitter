@@ -5,7 +5,21 @@ import { Close } from "../icons";
 import IconButton from "../button/icon";
 import Stack from "../stack";
 
-function TweetModal({ onClose = () => {} }) {
+function TweetModal({ closeModal = () => {} }) {
+  const [tweet, setTweet] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
+
+  const onSubmit = async () => {
+    setLoading(true);
+
+    const response = await fetch("/api/tweet/create", {
+      method: "POST",
+      body: JSON.stringify({ tweet: tweet }),
+    });
+
+    setLoading(false);
+  };
+
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
@@ -18,13 +32,17 @@ function TweetModal({ onClose = () => {} }) {
               className={styles.textarea}
               rows="4"
               placeholder="Whats happening?"
-            ></textarea>
+              value={tweet}
+              onChange={(e) => setTweet(e.target.value)}
+            />
           </div>
           <Stack gap={20} className={styles.footer}>
-            <IconButton className={styles.close} onClick={onClose}>
+            <IconButton className={styles.close} onClick={closeModal}>
               <Close />
             </IconButton>
-            <ThemeButton>Tweet</ThemeButton>
+            <ThemeButton onClick={onSubmit}>
+              {loading ? "Loading" : "Tweet"}
+            </ThemeButton>
           </Stack>
         </div>
       </div>

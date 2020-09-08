@@ -20,7 +20,7 @@ function LeftSidebar({ flat }) {
         </ThemeButton>
       </div>
 
-      {showModal && <TweetModal onClose={() => setShowModal(false)} />}
+      {showModal && <TweetModal closeModal={() => setShowModal(false)} />}
 
       <div className={styles.profile}>
         <ProfileBox flat={flat} />

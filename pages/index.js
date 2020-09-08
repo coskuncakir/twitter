@@ -5,7 +5,7 @@ import fetcher from "../lib/fetcher";
 import Loading from "../components/loading";
 
 function HomePage() {
-  const { data, error } = useSWR("/api/tweets", fetcher);
+  const { data, error } = useSWR("/api/tweet/list", fetcher);
 
   if (error) return <Layout>Failed to load</Layout>;
   if (!data)

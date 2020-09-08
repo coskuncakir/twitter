@@ -1,4 +1,4 @@
-import Twit from "../../lib/twit";
+import Twit from "../../../lib/twit";
 
 export default (req, res) => {
   Twit.get(
